@@ -1,0 +1,31 @@
+@import "./container";
+@import "./hw1.scss";
+@import "./hw2.scss";
+@import "./hw3.scss";
+@import "./hw5.scss";
+@import "./page404.scss";
+body {
+    background-color: rgb(136, 136, 136);
+    padding: 10px;
+}
+.app {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    &__title {
+        font-size: 26px;
+        text-align: center;
+        font-weight: 600;
+    }
+    .subtitle {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    .wrapper {
+        padding: 20px;
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+    //*!
+}

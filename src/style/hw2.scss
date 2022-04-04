@@ -1,0 +1,50 @@
+.affairs {
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    &__items {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 250px;
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #000;
+        margin-bottom: 10px;
+        font-weight: 600;
+        button {
+            font-weight: 700;
+            min-width: 30px;
+            height: 30px;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+    &__footer {
+        button {
+            min-width: 50px;
+            height: 40px;
+            margin-right: 10px;
+            background: #000;
+            color: aliceblue;
+            font-size: 18px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            &:hover {
+                color: gold;
+            }
+            &:active {
+                background: aliceblue;
+                color: goldenrod;
+                border: 1px solid #000;
+            }
+        }
+    }
+}
