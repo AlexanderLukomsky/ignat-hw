@@ -1,0 +1,60 @@
+.radio {
+    &__input {
+        display: none;
+        &:checked + .radio__text::after {
+            opacity: 1;
+        }
+        &:checked + .radio__text {
+            color: #242424;
+            font-weight: 600;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        position: relative;
+        display: flex;
+        padding-left: 29px;
+        margin-bottom: 7px;
+        color: #6b6b6b;
+        line-height: 140%;
+        cursor: pointer;
+        &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 3px;
+            height: 18px;
+            width: 18px;
+            border: 1px solid #1b1b1b;
+            border-radius: 50%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: linear-gradient(165.96deg, #f08181 5%, #3a0707 90%);
+            border: 2px solid #f7f4f4;
+            transition: 0.4s;
+            opacity: 0;
+        }
+    }
+}
+.select {
+    min-width: 250px;
+    font-size: 18px;
+    border: 1px solid #3a0707;
+    box-shadow: 4px 4px 20px rgb(56, 68, 68);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    background: rgb(26, 25, 25);
+    font-weight: 500;
+    color: goldenrod;
+    cursor: pointer;
+}

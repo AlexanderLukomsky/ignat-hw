@@ -56,6 +56,7 @@ function HW4() {
                 {/*----------------------------------------------------*/}
 
                 <SuperCheckbox
+                    className={s.checkbox}
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
@@ -63,7 +64,7 @@ function HW4() {
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange} />
+                <SuperCheckbox className={s.checkbox} checked={checked} onChange={testOnChange} />
             </div>
         </div>
     )

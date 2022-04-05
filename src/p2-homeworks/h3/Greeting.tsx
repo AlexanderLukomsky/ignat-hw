@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react'
+import React, { ChangeEvent, KeyboardEvent } from 'react'
 type GreetingPropsType = {
     name: string // need to fix any
     setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void
@@ -12,12 +12,16 @@ const Greeting: React.FC<GreetingPropsType> = (
     { name, setNameCallback, addUser, error, totalUsers } // деструктуризация пропсов
 ) => {
     const inputClass = 'error'// need to fix with (?:)
-
+    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            addUser()
+        }
+    }
     return (
         <div className='greeting' >
-            <input value={name} onChange={setNameCallback} className={error ? inputClass : ''} />
+            <input value={name} onKeyPress={onKeyPressHandler} onChange={setNameCallback} className={error ? inputClass : ''} />
             {error && <span className='error'>{error}</span>}
-            <button onClick={addUser}>add</button>
+            <button className='button' onClick={addUser}>add</button>
             <span className='greeting__count'>{totalUsers}</span>
         </div>
     )

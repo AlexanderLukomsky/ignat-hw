@@ -4,7 +4,11 @@ import HW1 from '../h1/HW1'
 import HW2 from '../h2/HW2'
 import HW3 from '../h3/HW3'
 import HW4 from '../h4/HW4'
+import HW6 from '../h6/HW6'
+import HW7 from '../h7/HW7'
+import HW8 from '../h8/HW8'
 import Error404 from './pages/Error404'
+import { Junior } from './pages/Junior'
 import PreJunior from './pages/PreJunior'
 
 
@@ -14,6 +18,9 @@ export const PATH = {
     HW_2: '/hw2',
     HW_3: '/hw3',
     HW_4: '/hw4',
+    HW_6: '/hw6',
+    HW_7: '/hw7',
+    HW_8: '/hw8',
     JUNIOR: '/junior',
     JUNIOR_PLUS: '/junior-plus'
 }
@@ -28,10 +35,13 @@ function Routes1() {
                 <Route path={PATH.HW_2} element={<HW2 />} />
                 <Route path={PATH.HW_3} element={<HW3 />} />
                 <Route path={PATH.HW_4} element={<HW4 />} />
+                <Route path={PATH.HW_6} element={<HW6 />} />
+                <Route path={PATH.HW_7} element={<HW7 />} />
+                <Route path={PATH.HW_8} element={<HW8 />} />
                 <Route path={'404'} element={<Error404 />} />
                 <Route path='*' element={<Navigate replace to={'404'} />} />
 
-                <Route path={PATH.JUNIOR} element={<div>JUNIOR</div>} />
+                <Route path={PATH.JUNIOR} element={<Junior />} />
                 <Route path={PATH.JUNIOR_PLUS} element={<div>JUNIOR_PLUS</div>} />
             </Routes>
         </div>

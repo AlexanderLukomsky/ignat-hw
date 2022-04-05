@@ -1,0 +1,25 @@
+.sort {
+    &__list {
+        min-height: 180px;
+    }
+    &__item {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    &__footer {
+        max-width: 300px;
+        display: flex;
+        justify-content: space-between;
+        button {
+            &:hover {
+                background: #fff;
+                color: black;
+            }
+            &:active {
+                box-shadow: 2px 2px 8px black;
+            }
+            color: rgb(128, 0, 11);
+            background-color: aquamarine;
+        }
+    }
+}

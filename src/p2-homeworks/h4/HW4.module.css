@@ -12,8 +12,29 @@
     color: blue;
 }
 .className{
-    padding: 5px;
+    color: aliceblue;
     margin-bottom: 10px;
-    font-size: 16px;
-    min-width: 90px;
+    background-color: grey;
+}
+.className:disabled{
+    opacity: 0.5;
+}
+.checkbox{
+    position: relative;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+
+}
+.checkbox:checked::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }

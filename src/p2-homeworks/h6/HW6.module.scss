@@ -1,0 +1,37 @@
+.button {
+    position: relative;
+    background: #000;
+    color: goldenrod;
+    font-size: 16px;
+    margin-right: 10px;
+    height: 30px;
+    &:active {
+        background-color: aliceblue;
+        bottom: -2px;
+        box-shadow: 2px 3px 3px black;
+    }
+}
+.text {
+    margin: 20px 0px;
+    font-size: 16px;
+}
+.span {
+    position: relative;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    min-width: 150px;
+    cursor: pointer;
+    padding-right: 15px;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 13px;
+        height: 13px;
+        background: url("https://cdn-icons-png.flaticon.com/128/4277/4277132.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
