@@ -64,8 +64,11 @@ function Header() {
             <li key={'7'} className="navbar__item">
                 <NavLink to={PATH.HW_10} >homework - 10</NavLink>
             </li>
-            <li key={'7'} className="navbar__item">
+            <li key={'8'} className="navbar__item">
                 <NavLink to={PATH.HW_11} >homework - 11</NavLink>
+            </li>
+            <li key={'9'} className="navbar__item">
+                <NavLink to={PATH.HW_12} >homework - 12</NavLink>
             </li>
         </ul>
     ]
