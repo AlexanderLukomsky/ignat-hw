@@ -1,12 +1,14 @@
 import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import HW1 from '../h1/HW1'
+import HW10 from '../h10/HW10'
 import HW2 from '../h2/HW2'
 import HW3 from '../h3/HW3'
 import HW4 from '../h4/HW4'
 import HW6 from '../h6/HW6'
 import HW7 from '../h7/HW7'
 import HW8 from '../h8/HW8'
+import HW9 from '../h9/HW9'
 import Error404 from './pages/Error404'
 import { Junior } from './pages/Junior'
 import PreJunior from './pages/PreJunior'
@@ -21,6 +23,8 @@ export const PATH = {
     HW_6: '/hw6',
     HW_7: '/hw7',
     HW_8: '/hw8',
+    HW_9: '/hw9',
+    HW_10: '/hw10',
     JUNIOR: '/junior',
     JUNIOR_PLUS: '/junior-plus'
 }
@@ -38,6 +42,8 @@ function Routes1() {
                 <Route path={PATH.HW_6} element={<HW6 />} />
                 <Route path={PATH.HW_7} element={<HW7 />} />
                 <Route path={PATH.HW_8} element={<HW8 />} />
+                <Route path={PATH.HW_9} element={<HW9 />} />
+                <Route path={PATH.HW_10} element={<HW10 />} />
                 <Route path={'404'} element={<Error404 />} />
                 <Route path='*' element={<Navigate replace to={'404'} />} />
 

@@ -3,18 +3,19 @@ import Clock from './Clock'
 
 function HW9() {
     return (
-        <div>
-            <hr/>
-            homeworks 9
-
-            {/*should work (должно работать)*/}
-            <Clock/>
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeClock/>*/}
-            <hr/>
+        <div className='wrapper'>
+            <h3 className="subtitle">
+                homeworks 9
+            </h3>
+            <div className='sort__list'>
+                <div>
+                    <Clock />
+                </div>
+            </div>
+            <div className='sort__footer'>
+            </div>
         </div>
+
     )
 }
 
