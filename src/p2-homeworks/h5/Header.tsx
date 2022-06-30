@@ -76,6 +76,17 @@ function Header() {
     const className = open ? 'open' : ''
     return (
         <div className='header'>
+            <div style={{ display: 'flex', marginBottom: '20px' }}>
+                <div style={{ marginRight: '10px', padding: '10px', border: '1px solid red' }}>
+                    <NavLink to={PATH.PRE_JUNIOR} >PRE_JUNIOR</NavLink>
+                </div>
+                <div style={{ marginRight: '10px', padding: '10px', border: '1px solid red' }}>
+                    <NavLink to={PATH.JUNIOR} >JUNIOR</NavLink>
+                </div>
+                <div style={{ marginRight: '10px', padding: '10px', border: '1px solid red' }}>
+                    <NavLink to={PATH.JUNIOR_PLUS} >JUNIOR_PLUS</NavLink>
+                </div>
+            </div>
             <div className={`burger ${className}`} onClick={openMenu}>
                 <span></span>
                 <span></span>
