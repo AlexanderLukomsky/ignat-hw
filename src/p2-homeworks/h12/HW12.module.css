@@ -1,7 +1,11 @@
 .dark {
+    
     background: dimgrey;
+    color:aliceblue !important
 }
-
+.h12{
+    color: red
+}
 .dark-text {
     color: aliceblue;
 }
@@ -14,10 +18,10 @@
     color: aqua;
 }
 
-.some {
+.light {
     background: lightgreen;
 }
 
-.some-text {
+.light-text {
     color: darkslateblue;
 }
