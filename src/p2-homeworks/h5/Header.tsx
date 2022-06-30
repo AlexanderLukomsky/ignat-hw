@@ -64,6 +64,9 @@ function Header() {
             <li key={'7'} className="navbar__item">
                 <NavLink to={PATH.HW_10} >homework - 10</NavLink>
             </li>
+            <li key={'7'} className="navbar__item">
+                <NavLink to={PATH.HW_11} >homework - 11</NavLink>
+            </li>
         </ul>
     ]
     //*
