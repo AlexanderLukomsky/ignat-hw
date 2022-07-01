@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import './index.css'
 import App from './p1-main/m1-ui/u1-app/App'
-import store, { AppStoreType } from './p2-homeworks/h10/bll/store'
+import { store, AppStoreType } from './p2-homeworks/h10/bll/store'
 import * as serviceWorker from './serviceWorker'
 
 // igg2
@@ -13,7 +13,6 @@ ReactDOM.render(
         <Provider store={store} >
             <App />
         </Provider>
-
     </React.StrictMode>,
     document.getElementById("root")
 )

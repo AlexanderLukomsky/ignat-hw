@@ -12,9 +12,6 @@ function Header() {
     type SectionType = 'pre_junior' | 'junior' | 'junior+'
     const pre_junior: JSX.Element[] = [
         <ul key='1a' className='navbar__list'>
-            <li key='2a' className="navbar__item">
-                <NavLink to={PATH.PRE_JUNIOR} >pre junior</NavLink>
-            </li>
             <li key='3a' className="navbar__item">
                 <NavLink to={PATH.HW_1} >homework - 1</NavLink>
             </li>
@@ -30,28 +27,19 @@ function Header() {
             <li key='7a' className="navbar__item">
                 <NavLink to={PATH.HW_6} >homework - 6</NavLink>
             </li>
-            <li key='8a' className="navbar__item" onClick={() => setSection('junior')}>
+            <li key='8a' className="navbar__item" onClick={() => setSection('junior')} style={{ borderColor: 'green', borderRadius: '10px' }}>
                 <NavLink to={PATH.JUNIOR} >JUNIOR</NavLink>
             </li>
-            <li key='9a' className="navbar__item">
-                <NavLink to={PATH.JUNIOR_PLUS} >JUNIOR_PLUS</NavLink>
+            <li key='9a' className="navbar__item" onClick={() => setSection('junior+')} style={{ borderColor: 'green', borderRadius: '10px' }}>
+                <NavLink to={PATH.JUNIOR_PLUS} >JUNIOR PLUS</NavLink>
             </li>
-            <li key='10a' className="navbar__item">
+            <li key='10a' className="navbar__item" style={{ borderColor: 'green', borderRadius: '10px' }}>
                 <NavLink to={'/incorrect-path'} >404</NavLink>
             </li>
         </ul>
     ]
     const junior: JSX.Element[] = [
         <ul key={'0'} className='navbar__list'>
-            <li key={'1'} className="navbar__item">
-                <NavLink to={PATH.JUNIOR} >junior</NavLink>
-            </li>
-            <li key={'2'} className="navbar__item" onClick={() => setSection('pre_junior')}>
-                <NavLink to={PATH.PRE_JUNIOR} >pre junior</NavLink>
-            </li>
-            <li key={'3'} className="navbar__item">
-                <NavLink to={PATH.JUNIOR_PLUS} >JUNIOR_PLUS</NavLink>
-            </li>
             <li key={'4'} className="navbar__item">
                 <NavLink to={PATH.HW_7} >homework - 7</NavLink>
             </li>
@@ -70,23 +58,42 @@ function Header() {
             <li key={'9'} className="navbar__item">
                 <NavLink to={PATH.HW_12} >homework - 12</NavLink>
             </li>
+            <li key={'2'} style={{ borderColor: 'green', borderRadius: '10px' }} className="navbar__item" onClick={() => setSection('pre_junior')}>
+                <NavLink to={PATH.PRE_JUNIOR} >PRE JUNIOR</NavLink>
+            </li>
+            <li key={'3'} className="navbar__item" style={{ borderColor: 'green', borderRadius: '10px' }} onClick={() => setSection('junior+')}>
+                <NavLink to={PATH.JUNIOR_PLUS} >JUNIOR PLUS</NavLink>
+            </li>
+        </ul>
+    ]
+    const juniorPlus: JSX.Element[] = [
+        <ul key='0j' className='navbar__list'>
+            <li key='1j' className="navbar__item">
+                <NavLink to={PATH.HW_13} >homework - 13</NavLink>
+            </li>
+            <li key={'j22'} style={{ borderColor: 'green', borderRadius: '10px' }} className="navbar__item" onClick={() => setSection('pre_junior')}>
+                <NavLink to={PATH.PRE_JUNIOR} >PRE JUNIOR</NavLink>
+            </li>
+            <li key={'j33'} className="navbar__item" style={{ borderColor: 'green', borderRadius: '10px' }} onClick={() => setSection('junior')}>
+                <NavLink to={PATH.JUNIOR} >JUNIOR</NavLink>
+            </li>
         </ul>
     ]
     //*
     const className = open ? 'open' : ''
     return (
         <div className='header'>
-            <div style={{ display: 'flex', marginBottom: '20px' }}>
-                <div style={{ marginRight: '10px', padding: '10px', border: '1px solid red' }}>
+            <ul style={{ display: 'flex', marginBottom: '20px' }}>
+                <li style={{ marginRight: '10px', padding: '10px', border: '1px solid red' }} onClick={() => setSection('pre_junior')}>
                     <NavLink to={PATH.PRE_JUNIOR} >PRE_JUNIOR</NavLink>
-                </div>
-                <div style={{ marginRight: '10px', padding: '10px', border: '1px solid red' }}>
+                </li>
+                <li style={{ marginRight: '10px', padding: '10px', border: '1px solid red' }} onClick={() => setSection('junior')}>
                     <NavLink to={PATH.JUNIOR} >JUNIOR</NavLink>
-                </div>
-                <div style={{ marginRight: '10px', padding: '10px', border: '1px solid red' }}>
+                </li>
+                <li style={{ marginRight: '10px', padding: '10px', border: '1px solid red' }} onClick={() => setSection('junior+')}>
                     <NavLink to={PATH.JUNIOR_PLUS} >JUNIOR_PLUS</NavLink>
-                </div>
-            </div>
+                </li>
+            </ul>
             <div className={`burger ${className}`} onClick={openMenu}>
                 <span></span>
                 <span></span>
@@ -95,6 +102,7 @@ function Header() {
             <nav className={`navbar ${className}`}>
                 {section === 'junior' && junior}
                 {section === 'pre_junior' && pre_junior}
+                {section === 'junior+' && juniorPlus}
             </nav>
         </div>
     )
